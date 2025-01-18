@@ -23,10 +23,10 @@ function mapHTML(name, id, createdBy){
         <td class="col-n" id="map-table-functions">
             <div class="row-5px">
                 <button id="edit-map">
-                    <img class="plus-btn-img" alt="Edit mission" src="/Mir/images/edit.svg" loading="lazy"/>                     
+                    <img class="plus-btn-img" alt="Edit mission" src="../../images/edit.svg" loading="lazy"/>                     
                 </button>
                 <button class="del-btn" id="del-map">
-                    <img class="plus-btn-img" alt="Create map groups" src="/Mir/images/x.svg" loading="lazy"/>
+                    <img class="plus-btn-img" alt="Create map groups" src="../../images/x.svg" loading="lazy"/>
                 </button>
             </div>
         </td>
@@ -40,9 +40,9 @@ try {
 }
 
 function createMapClick(){
-    window.open("/Mir/html/setup/maps/create-map.html", '_top');
+    window.open("../../html/setup/maps/create-map.html", '_top');
 }
 
 function editMapClick(){
-    window.open("/Mir/html/setup/maps/edit-map.html", '_top');
+    window.open("../../html/setup/maps/edit-map.html", '_top');
 }
