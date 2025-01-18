@@ -3,111 +3,152 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="/Mir/css/app-style-guide.css"/>
-    <link rel="stylesheet" href="/Mir/css/sidebar.css"/>
-    <link rel="stylesheet" href="/Mir/css/subsidebar.css"/>
-    <link rel="stylesheet" href="/Mir/css/header.css"/>
-    <link rel="stylesheet" href="/Mir/css/setup.css"/>
-    
-    <script src="/Mir/js/sidebar.js" defer></script>
-    <script src="/Mir/js/subsidebar.js" defer></script>
-    <script src="/Mir/js/setup.js" defer></script>
-    <script src="/Mir/js/header.js"></script>
-    <script src="/Mir/js/rest-api.js"></script>
-    <script src="/Mir/js/setup/mission/edit-mission.js" defer></script>
+    <link rel="stylesheet" href="../../../css/app-style-guide.css" />
+    <link rel="stylesheet" href="../../../css/sidebar.css" />
+    <link rel="stylesheet" href="../../../css/subsidebar.css" />
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/setup.css" />
+
+    <script src="../../../js/sidebar.js" defer></script>
+    <script src="../../../js/subsidebar.js" defer></script>
+    <script src="../../../js/setup.js" defer></script>
+    <script src="../../../js/header.js"></script>
+    <script src="../../../js/rest-api.js"></script>
+    <script src="../../../js/setup/mission/edit-mission.js" defer></script>
 
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
     />
     <title></title>
   </head>
 
   <body>
-    <ul id="left-sidebar-list">
-    </ul>
+    <ul id="left-sidebar-list"></ul>
 
     <main>
-      <header-component style="height: 40px;">
-      </header-component>
+      <header-component style="height: 40px"> </header-component>
 
       <div class="main-content">
-        <ul id="left-subsidebar-list">
-        </ul>
+        <ul id="left-subsidebar-list"></ul>
 
         <div id="content-container">
-        <!--Content-->
-    
-        <!--ADD ACTIONS-->
-        <ul class="full-width flex row sidebar-background-color" id="mission-groups-list">
-            
-        </ul>
+          <!--Content-->
 
-        <div id="create-mission-content" class="content flex">
-          <div class="flex row full-width align-center space-between">
-            <div class="flex col gap-5px">
-              <h1>Mission's name</h1>
+          <!--ADD ACTIONS-->
+          <ul
+            class="full-width flex row sidebar-background-color"
+            id="mission-groups-list"
+          ></ul>
+
+          <div id="create-mission-content" class="content flex">
+            <div class="flex row full-width align-center space-between">
+              <div class="flex col gap-5px">
+                <h1>Mission's name</h1>
+                <div class="row-5px">
+                  Watch and edit the mission.
+                  <button class="help-btn">
+                    <img
+                      class="help-btn-img"
+                      alt="Help"
+                      src="../../../images/help.svg"
+                      loading="lazy"
+                    />
+                  </button>
+                </div>
+              </div>
+
               <div class="row-5px">
-                Watch and edit the mission.
-                <button class="help-btn">
-                  <img class="help-btn-img" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
+                <button id="go-back" onclick="goBack()">
+                  <img
+                    class="plus-btn-img"
+                    alt="Go back"
+                    src="../../../images/go-back.svg"
+                    loading="lazy"
+                  />
+                  Go back
+                </button>
+                <button class="flex row gap-5px">
+                  <img
+                    class="plus-btn-img"
+                    alt="Save mission"
+                    src="../../../images/tick.svg"
+                    loading="lazy"
+                  />
+                  Save
+                </button>
+                <button class="flex row gap-5px">
+                  <img
+                    class="plus-btn-img"
+                    alt="Save as mission"
+                    src="../../../images/more.svg"
+                    loading="lazy"
+                  />
+                  Save as
+                </button>
+                <button class="del-btn" onclick="deleteMission()">
+                  <img
+                    class="plus-btn-img"
+                    alt="Delete mission"
+                    src="../../../images/x.svg"
+                    loading="lazy"
+                  />
+                  Delete
                 </button>
               </div>
             </div>
-          
-            <div class="row-5px">
-              <button id="go-back" onclick="goBack()">
-                <img class="plus-btn-img" alt="Go back" src="/Mir/images/go-back.svg" loading="lazy"/>
-                Go back
-              </button>
-              <button class="flex row gap-5px">
-                <img class="plus-btn-img" alt="Save mission" src="/Mir/images/tick.svg" loading="lazy"/>
-                Save
-              </button>
-              <button class="flex row gap-5px">
-                <img class="plus-btn-img" alt="Save as mission" src="/Mir/images/more.svg" loading="lazy"/>
-                Save as
-              </button>
-              <button class="del-btn" onclick="deleteMission()">
-                <img class="plus-btn-img" alt="Delete mission" src="/Mir/images/x.svg" loading="lazy"/>
-                Delete
-              </button>
-              
-            </div>
-          </div>
 
-          <div class="full-width flex row gap-15px">
-            <!--Chứa list các action-->
-            <section class="full-width">
-              <ul class="full-width flex col gap-5px">
-                <li class="full-width flex row subsidebar-background-color">
-                  <div class="padding-7px align-center">
-                    <img class="plus-btn-img" alt="Action" src="/Mir/images/action.svg" loading="lazy"/> 
-                  </div>
-                    
-                  <div class="full-width flex row align-center">
-                    <div class="full-width align-center padding-7px">Action's name</div>
-                    <div class="flex row align-center">              
-                      <button class="radius-none">
-                        <img class="plus-btn-img" alt="Edit mission" src="/Mir/images/edit.svg" loading="lazy"/>                     
-                      </button>       
-                      
-                      <button class="radius-none" onclick="toggleHidden('edit-action-description')">
-                        <img class="plus-btn-img" alt="Edit action" src="/Mir/images/setting.svg" loading="lazy"/>
-                      </button>
+            <div class="full-width flex row gap-15px">
+              <!--Chứa list các action-->
+              <section class="full-width">
+                <ul class="full-width flex col gap-5px">
+                  <li class="full-width flex row subsidebar-background-color">
+                    <div class="padding-7px align-center">
+                      <img
+                        class="plus-btn-img"
+                        alt="Action"
+                        src="../../../images/action.svg"
+                        loading="lazy"
+                      />
                     </div>
-                  </div>
-                  
-                </li>
-              </ul>
-            </section>
 
-            <section id="edit-action-description" class="width-30per hidden">
-              <!--
+                    <div class="full-width flex row align-center">
+                      <div class="full-width align-center padding-7px">
+                        Action's name
+                      </div>
+                      <div class="flex row align-center">
+                        <button class="radius-none">
+                          <img
+                            class="plus-btn-img"
+                            alt="Edit mission"
+                            src="../../../images/edit.svg"
+                            loading="lazy"
+                          />
+                        </button>
+
+                        <button
+                          class="radius-none"
+                          onclick="toggleHidden('edit-action-description')"
+                        >
+                          <img
+                            class="plus-btn-img"
+                            alt="Edit action"
+                            src="../../../images/setting.svg"
+                            loading="lazy"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <section id="edit-action-description" class="width-30per hidden">
+                <!--
               <div class="row-5px">
                 <h3>Move</h3>
                 <button class="help-btn">
-                  <img class="help-btn-img" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
+                  <img class="help-btn-img" alt="Help" src="../../../images/help.svg" loading="lazy"/>
                 </button>
               </div>
 
@@ -115,7 +156,7 @@
                 <div class="row-5px">
                   <label for="position">Position</label>
                   <button class="help-btn">
-                    <img class="help-btn-img-7px" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
+                    <img class="help-btn-img-7px" alt="Help" src="../../../images/help.svg" loading="lazy"/>
                   </button>
                 </div>
                 
@@ -128,7 +169,7 @@
                 <div class="row-5px">
                   <label for="retries">Retries (Blocked Path)</label>
                   <button class="help-btn">
-                    <img class="help-btn-img-7px" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
+                    <img class="help-btn-img-7px" alt="Help" src="../../../images/help.svg" loading="lazy"/>
                   </button>
                 </div>
                 <input class="full-width" type="text">
@@ -138,7 +179,7 @@
                 <div class="row-5px">
                   <label for="distance">Distance threshold</label>
                   <button class="help-btn">
-                    <img class="help-btn-img-7px" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
+                    <img class="help-btn-img-7px" alt="Help" src="../../../images/help.svg" loading="lazy"/>
                   </button>
                 </div>
                 
@@ -158,79 +199,103 @@
               </button>
               -->
 
-              <div class="row-5px">
-                <h3>Prompt user</h3>
-                <button class="help-btn">
-                  <img class="help-btn-img" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
-                </button>
-              </div>
-
-              <div class="col-3px">
                 <div class="row-5px">
-                  <label for="question">Question</label>
+                  <h3>Prompt user</h3>
                   <button class="help-btn">
-                    <img class="help-btn-img-7px" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
+                    <img
+                      class="help-btn-img"
+                      alt="Help"
+                      src="../../../images/help.svg"
+                      loading="lazy"
+                    />
                   </button>
                 </div>
-                <input class="full-width" type="text">
-              </div>
 
-              <div class="col-3px">
-                <div class="row-5px">
-                  <label for="user-group">User group</label>
-                  <button class="help-btn">
-                    <img class="help-btn-img-7px" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
-                  </button>
-                </div>
-                
-                <select class="full-width">
-                  <option value="User">User</option>
-                </select>
-              </div>
-
-              <div class="col-3px">
-                <div class="row-5px">
-                  <label for="timeout">Timeout (seconds)</label>
-                  <button class="help-btn">
-                    <img class="help-btn-img-7px" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
-                  </button>
-                </div>
-                
-                <div class="row-5px">
-                  <div class="flex col align-center">
-                    <input type="number">  
-                    <div class="full-width flex col sidebar-background-color padding-7px align-center white-text">HRS</div>
+                <div class="col-3px">
+                  <div class="row-5px">
+                    <label for="question">Question</label>
+                    <button class="help-btn">
+                      <img
+                        class="help-btn-img-7px"
+                        alt="Help"
+                        src="../../../images/help.svg"
+                        loading="lazy"
+                      />
+                    </button>
                   </div>
-                  
-                  <div class="flex col align-center">
-                    <input type="number">  
-                    <div class="full-width flex col sidebar-background-color padding-7px align-center white-text">MIN</div>
+                  <input class="full-width" type="text" />
+                </div>
+
+                <div class="col-3px">
+                  <div class="row-5px">
+                    <label for="user-group">User group</label>
+                    <button class="help-btn">
+                      <img
+                        class="help-btn-img-7px"
+                        alt="Help"
+                        src="../../../images/help.svg"
+                        loading="lazy"
+                      />
+                    </button>
                   </div>
 
-                  <div class="flex col align-center">
-                    <input type="number">  
-                    <div class="full-width flex col sidebar-background-color padding-7px align-center white-text">SEC</div>
+                  <select class="full-width">
+                    <option value="User">User</option>
+                  </select>
+                </div>
+
+                <div class="col-3px">
+                  <div class="row-5px">
+                    <label for="timeout">Timeout (seconds)</label>
+                    <button class="help-btn">
+                      <img
+                        class="help-btn-img-7px"
+                        alt="Help"
+                        src="../../../images/help.svg"
+                        loading="lazy"
+                      />
+                    </button>
+                  </div>
+
+                  <div class="row-5px">
+                    <div class="flex col align-center">
+                      <input type="number" />
+                      <div
+                        class="full-width flex col sidebar-background-color padding-7px align-center white-text"
+                      >
+                        HRS
+                      </div>
+                    </div>
+
+                    <div class="flex col align-center">
+                      <input type="number" />
+                      <div
+                        class="full-width flex col sidebar-background-color padding-7px align-center white-text"
+                      >
+                        MIN
+                      </div>
+                    </div>
+
+                    <div class="flex col align-center">
+                      <input type="number" />
+                      <div
+                        class="full-width flex col sidebar-background-color padding-7px align-center white-text"
+                      >
+                        SEC
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <button class="full-width">
-                Validate and close
-              </button>
+                <button class="full-width">Validate and close</button>
 
-              <button class="full-width outline-btn">
-                Undo and close
-              </button>
+                <button class="full-width outline-btn">Undo and close</button>
 
-              <button class="full-width del-btn">
-                Remove action
-              </button>
-              
-            </section>
+                <button class="full-width del-btn">Remove action</button>
+              </section>
+            </div>
           </div>
         </div>
-
-      </div>
       </div>
     </main>
   </body>

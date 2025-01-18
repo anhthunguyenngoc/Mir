@@ -7,27 +7,27 @@ class Header extends HTMLElement {
         this.innerHTML = `
             <ul id="right-header-list">
                 <li id="startRobot" class="header-button" onClick ="toggleHidden('startRobot-section')">
-                    <img class="header-btn-img" alt="Control" src="../../images/start.svg" loading="lazy"/>
+                    <img class="header-btn-img" alt="Control" src="../../../images/start.svg" loading="lazy"/>
                     Paused
                 </li>
                 <li id="status" class="header-button" onClick ="toggleHidden('status-section')">
-                    <img class="header-btn-img" alt="Control" src="../../images/tick.svg" loading="lazy"/>
+                    <img class="header-btn-img" alt="Control" src="../../../images/tick.svg" loading="lazy"/>
                     All OK
                 </li>
                 <li id="loggedInUser" class="relative-pos header-button" onclick="toggleHidden('loggedInUser-section')">
                     <img
                         class="plus-btn-img"
                         alt="Change user data"
-                        src="../../images/user.svg"
+                        src="../../../images/user.svg"
                         loading="lazy"
                     />
                     <span class="nowrap">Distributor</span>
                 </li>
                 <li id="control" class="relative-pos header-button" onClick ="toggleHidden('control-section')">
-                    <img class="header-btn-img" alt="Control" src="../../images/control.svg" loading="lazy"/>
+                    <img class="header-btn-img" alt="Control" src="../../../images/control.svg" loading="lazy"/>
                 </li>
                 <li id="battery" class="header-button">
-                    <img class="header-btn-img" alt="battery" src="../../images/battery-100.svg" loading="lazy"/>
+                    <img class="header-btn-img" alt="battery" src="../../../images/battery-100.svg" loading="lazy"/>
                     100%
                 </li>
             </ul>
@@ -82,7 +82,7 @@ class Header extends HTMLElement {
             <img
                 class="plus-btn-img"
                 alt="Change user data"
-                src="../../images/user.svg"
+                src="../../../images/user.svg"
                 loading="lazy"
             />
             <span class="nowrap">Change user data</span>
@@ -92,7 +92,7 @@ class Header extends HTMLElement {
             <img
                 class="plus-btn-img"
                 alt="Log out"
-                src="../../images/signout.svg"
+                src="../../../images/signout.svg"
                 loading="lazy"
             />
             Log out

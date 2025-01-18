@@ -1,43 +1,43 @@
   const url = new Map();
-  url.set('dashboard', '/Mir/html/dashboards/dashboard.html');
+  url.set('dashboard', '../../../html/dashboards/default-dashboard/dashboard.html');
 
-  url.set('mission', '/Mir/html/setup/missions/mission.html');
-  url.set('edit-mission', '/Mir/html/setup/missions/edit-mission.html');
-  url.set('create-mission', '/Mir/html/setup/missions/create-mission.html');
+  url.set('mission', '../../../html/setup/missions/mission.html');
+  url.set('edit-mission', '../../../html/setup/missions/edit-mission.html');
+  url.set('create-mission', '../../../html/setup/missions/create-mission.html');
 
-  url.set('io-module', '/Mir/html/setup/io-modules/io-module.html');
-  url.set('edit-io-module', '/Mir/html/setup/io-modules/edit-io-module.html');
-  url.set('create-io-module', '/Mir/html/setup/io-modules/create-io-module.html');
+  url.set('io-module', '../../../html/setup/io-modules/io-module.html');
+  url.set('edit-io-module', '../../../html/setup/io-modules/edit-io-module.html');
+  url.set('create-io-module', '../../../html/setup/io-modules/create-io-module.html');
 
-  url.set('map', '/Mir/html/setup/maps/map.html');
-  url.set('edit-map', '/Mir/html/setup/maps/edit-map.html');
-  url.set('create-map', '/Mir/html/setup/maps/create-map.html');
+  url.set('map', '../../../html/setup/maps/map.html');
+  url.set('edit-map', '../../../html/setup/maps/edit-map.html');
+  url.set('create-map', '../../../html/setup/maps/create-map.html');
 
-  url.set('sound', '/Mir/html/setup/sounds/sound.html');
-  url.set('edit-sound', '/Mir/html/setup/sounds/edit-sound.html');
-  url.set('transition', '/Mir/html/setup/transitions/transition.html');
+  url.set('sound', '../../../html/setup/sounds/sound.html');
+  url.set('edit-sound', '../../../html/setup/sounds/edit-sound.html');
+  url.set('transition', '../../../html/setup/transitions/transition.html');
 
-  url.set('edit-transition', '/Mir/html/setup/transitions/edit-transition.html');
-  url.set('create-transition', '/Mir/html/setup/transitions/create-transition.html');
-  url.set('delete-transition', '/Mir/html/setup/transitions/delete-transition.html');
+  url.set('edit-transition', '../../../html/setup/transitions/edit-transition.html');
+  url.set('create-transition', '../../../html/setup/transitions/create-transition.html');
+  url.set('delete-transition', '../../../html/setup/transitions/delete-transition.html');
 
-  url.set('user-group', '/Mir/html/setup/user-groups/user-group.html');
-  url.set('edit-user-group', '/Mir/html/setup/user-groups/edit-user-group.html');
-  url.set('create-user-group', '/Mir/html/setup/user-groups/create-user-group.html');
-  url.set('delete-user-group', '/Mir/html/setup/user-groups/delete-user-group.html');
-  url.set('set-permission', '/Mir/html/setup/user-groups/set-permission.html');
+  url.set('user-group', '../../../html/setup/user-groups/user-group.html');
+  url.set('edit-user-group', '../../../html/setup/user-groups/edit-user-group.html');
+  url.set('create-user-group', '../../../html/setup/user-groups/create-user-group.html');
+  url.set('delete-user-group', '../../../html/setup/user-groups/delete-user-group.html');
+  url.set('set-permission', '../../../html/setup/user-groups/set-permission.html');
 
-  url.set('user', '/Mir/html/setup/users/user.html');
-  url.set('edit-user', '/Mir/html/setup/users/edit-user.html');
-  url.set('create-user', '/Mir/html/setup/users/create-user.html');
-  url.set('delete-user', '/Mir/html/setup/users/delete-user.html');
+  url.set('user', '../../../html/setup/users/user.html');
+  url.set('edit-user', '../../../html/setup/users/edit-user.html');
+  url.set('create-user', '../../../html/setup/users/create-user.html');
+  url.set('delete-user', '../../../html/setup/users/delete-user.html');
   
-  url.set('analytic', '/Mir/html/monitoring/analytics/analytic.html');
-  url.set('mission-log', '/Mir/html/monitoring/mission-log/mission-log.html');
-  url.set('system-log', '/Mir/html/monitoring/system-log/system-log.html');
-  url.set('error-log', '/Mir/html/monitoring/error-logs/error-log.html');
-  url.set('safety-system', '/Mir/html/monitoring/safety-system/safety-system.html');
-  url.set('hardware-health', '/Mir/html/monitoring/hardware-health/hardware-health.html');
+  url.set('analytic', '../../../html/monitoring/analytics/analytic.html');
+  url.set('mission-log', '../../../html/monitoring/mission-log/mission-log.html');
+  url.set('system-log', '../../../html/monitoring/system-log/system-log.html');
+  url.set('error-log', '../../../html/monitoring/error-logs/error-log.html');
+  url.set('safety-system', '../../../html/monitoring/safety-system/safety-system.html');
+  url.set('hardware-health', '../../../html/monitoring/hardware-health/hardware-health.html');
 
   function getURLForItemID(itemID) {
     return url.get(itemID);

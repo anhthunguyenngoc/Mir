@@ -14,7 +14,7 @@ function defaultToolsHTML() {
     <ul class="map-options">
         <li>
             <button class="map-option" id="edit" onclick="editMap()">
-                <img class="map-option-tool-img" src="../../images/brush.svg" alt="Edit map">
+                <img class="map-option-tool-img" src="../../../images/brush.svg" alt="Edit map">
             </button>              
         </li>
     </ul>
@@ -26,37 +26,37 @@ function editToolsHTML() {
     <ul class="map-options">
         <li>
             <button class="map-option toggle-button" id="brushToggle">
-                <img class="map-option-tool-img" src="../../images/brush.svg" alt="Edit map">
+                <img class="map-option-tool-img" src="../../../images/brush.svg" alt="Edit map">
             </button>              
         </li>
         <li>
             <button class="map-option toggle-button" id="lineToggle">
-                <img class="map-option-tool-img" src="../../images/line.svg" alt="Draw line">
+                <img class="map-option-tool-img" src="../../../images/line.svg" alt="Draw line">
             </button>              
         </li>
         <li>
             <button class="map-option toggle-button" id="curveToggle">
-                <img class="map-option-tool-img" src="../../images/curve.svg" alt="Draw curve">
+                <img class="map-option-tool-img" src="../../../images/curve.svg" alt="Draw curve">
             </button>              
         </li>
         <li>
             <button class="map-option toggle-button" id="zigzagToggle">
-                <img class="map-option-tool-img" src="../../images/zigzag.svg" alt="Draw zigzag">
+                <img class="map-option-tool-img" src="../../../images/zigzag.svg" alt="Draw zigzag">
             </button>              
         </li>
         <li>
             <button class="map-option toggle-button" id="squareToggle">
-                <img class="map-option-tool-img" src="../../images/brush.svg" alt="Draw square">
+                <img class="map-option-tool-img" src="../../../images/brush.svg" alt="Draw square">
             </button>              
         </li>
         <li>
             <button class="map-option" id="deleteSelected" onclick="deleteSelected()">
-                <img class="map-option-tool-img" src="../../images/bin.svg" alt="Delete">
+                <img class="map-option-tool-img" src="../../../images/bin.svg" alt="Delete">
             </button>              
         </li>
         <li>
             <button class="map-option" id="saveEditMap">
-                <img class="map-option-tool-img" src="../../images/tick.svg" alt="Delete">
+                <img class="map-option-tool-img" src="../../../images/tick.svg" alt="Delete">
             </button>              
         </li>
     </ul>
@@ -756,12 +756,12 @@ function pauseMove() {
     <ul class="map-options">
         <li>
             <button class="map-option tool" id="resume-move" onclick="resumeMove()">
-                <img class="map-option-tool-img" src="../../images/stop.svg" alt="Zoom in">
+                <img class="map-option-tool-img" src="../../../images/stop.svg" alt="Zoom in">
             </button>              
         </li>
         <li>
             <button class="map-option tool" id="cancel-move" onclick="cancelMove()">
-                <img class="map-option-tool-img" src="../../images/x.svg" alt="Zoom in">
+                <img class="map-option-tool-img" src="../../../images/x.svg" alt="Zoom in">
             </button>              
         </li>
     </ul>
@@ -776,7 +776,7 @@ function resumeMove() {
     <ul class="map-options">
         <li>
             <button class="map-option tool" id="pause-move" onclick="pauseMove()">
-                <img class="map-option-tool-img" src="../../images/start.svg" alt="Zoom in">
+                <img class="map-option-tool-img" src="../../../images/start.svg" alt="Zoom in">
             </button>              
         </li>
     </ul>
@@ -801,7 +801,7 @@ function cancelMove() {
     <ul class="map-options">
         <li>
             <button class="map-option tool" id="pause-move" onclick="pauseMove()">
-                <img class="map-option-tool-img" src="../../images/start.svg" alt="Zoom in">
+                <img class="map-option-tool-img" src="../../../images/start.svg" alt="Zoom in">
             </button>              
         </li>
     </ul>
