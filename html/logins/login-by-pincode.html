@@ -3,54 +3,81 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="/Mir/css/app-style-guide.css"/>
-    <link rel="stylesheet" href="/Mir/css/login.css"/>
-    
-    <script src="/Mir/js/login.js"></script>
-    <script src="/Mir/js/rest-api.js"></script>
+    <link rel="stylesheet" href="../../css/app-style-guide.css" />
+    <link rel="stylesheet" href="../../css/login.css" />
+
+    <script src="../../js/login.js"></script>
+    <script src="../../js/rest-api.js"></script>
 
     <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
     />
     <title></title>
   </head>
 
   <body class="flex col align-center justify-center">
     <div class="width-75per height-75per flex col">
-        <div class="full-width flex row sidebar-background-color align-center login-header">
-            <div class="full-width">
-                Robot's name
-            </div>
-            <div  class="nowrap">
-                Please choose a way to sign in:
-            </div>
-            <ul class="flex row full-height align-end">
-                <li>
-                    <button class="login-btn nowrap padding-15px full-height" onclick="signInByPass()">Username and password</button>
-                </li>
-                <li>
-                    <button class="login-btn selected nowrap padding-15px full-height">PIN code</button>
-                </li>
-            </ul>
-        </div>
+      <div
+        class="full-width flex row sidebar-background-color align-center login-header"
+      >
+        <div class="full-width">Robot's name</div>
+        <div class="nowrap">Please choose a way to sign in:</div>
+        <ul class="flex row full-height align-end">
+          <li>
+            <button
+              class="login-btn nowrap padding-15px full-height"
+              onclick="signInByPass()"
+            >
+              Username and password
+            </button>
+          </li>
+          <li>
+            <button class="login-btn selected nowrap padding-15px full-height">
+              PIN code
+            </button>
+          </li>
+        </ul>
+      </div>
 
-        <section class="full-width full-height flex col gap-frame">
-            <h2>Sign in by pincode</h2>
-            <div>
-                If you are registerd in the robot as a pincode-enabled user, you can use your pincode to sign in from here.
-            </div>
-            <div>
-                If you don't have a pincode, but would like to use this method for signing in, you should contact your robot administrator.
-            </div>
-            <div class="height-25per flex row gap-2per">   
-                <input class="full-height code padding-15px" id="code-01" name="code-01" type="password">
-                <input class="full-height code padding-15px" id="code-02" name="code-02" type="password">
-                <input class="full-height code padding-15px" id="code-03" name="code-03" type="password">
-                <input class="full-height code padding-15px" id="code-04" name="code-04" type="password">       
-            </div>
-            <button id="sign-in" onclick="confirmSignInByCode()">Sign in</button>
-        </section>
+      <section class="full-width full-height flex col gap-frame">
+        <h2>Sign in by pincode</h2>
+        <div>
+          If you are registerd in the robot as a pincode-enabled user, you can
+          use your pincode to sign in from here.
+        </div>
+        <div>
+          If you don't have a pincode, but would like to use this method for
+          signing in, you should contact your robot administrator.
+        </div>
+        <div class="height-25per flex row gap-2per">
+          <input
+            class="full-height code padding-15px"
+            id="code-01"
+            name="code-01"
+            type="password"
+          />
+          <input
+            class="full-height code padding-15px"
+            id="code-02"
+            name="code-02"
+            type="password"
+          />
+          <input
+            class="full-height code padding-15px"
+            id="code-03"
+            name="code-03"
+            type="password"
+          />
+          <input
+            class="full-height code padding-15px"
+            id="code-04"
+            name="code-04"
+            type="password"
+          />
+        </div>
+        <button id="sign-in" onclick="confirmSignInByCode()">Sign in</button>
+      </section>
     </div>
   </body>
 </html>

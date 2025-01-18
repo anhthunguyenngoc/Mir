@@ -7,30 +7,30 @@
   function sidebarHTML() {
     return  `
       <li id="back-forward" class="back-forward-button">
-          <img class="sidebar-btn-img" alt="Dashboards" src="/Mir/images/back-forward.svg" loading="lazy"/>
+          <img class="sidebar-btn-img" alt="Dashboards" src="../../images/back-forward.svg" loading="lazy"/>
       </li>
       <li id="dashboards" class="sidebar-button" onClick ="loadDashboardSubsidebar()">
-          <img class="sidebar-btn-img" alt="Dashboards" src="/Mir/images/dashboard.svg" loading="lazy"/>
+          <img class="sidebar-btn-img" alt="Dashboards" src="../../images/dashboard.svg" loading="lazy"/>
           Dashboards
       </li>
       <li id="setup" class="sidebar-button" onClick ="loadSetupSubsidebar()">
-          <img class="sidebar-btn-img" alt="Setup" src="/Mir/images/setup.svg" loading="lazy"/>
+          <img class="sidebar-btn-img" alt="Setup" src="../../images/setup.svg" loading="lazy"/>
           Setup
       </li>               
       <li id="monitoring" class="sidebar-button" onClick ="loadMonitoringSubsidebar()">
-          <img class="sidebar-btn-img" alt="Monitoring" src="/Mir/images/monitoring.svg" loading="lazy"/>
+          <img class="sidebar-btn-img" alt="Monitoring" src="../../images/monitoring.svg" loading="lazy"/>
           Monitoring
       </li>
       <li id="system" class="sidebar-button" onClick ="loadSystemSubsidebar()">
-          <img class="sidebar-btn-img" alt="System" src="/Mir/images/setting.svg" loading="lazy"/>
+          <img class="sidebar-btn-img" alt="System" src="../../images/setting.svg" loading="lazy"/>
           System
       </li>
       <li id="help" class="sidebar-button" onClick ="loadHelpSubsidebar()">
-          <img class="sidebar-btn-img" alt="Help" src="/Mir/images/help-circle.svg" loading="lazy"/>
+          <img class="sidebar-btn-img" alt="Help" src="../../images/help-circle.svg" loading="lazy"/>
           Help
       </li>
       <li id="signout" class="sidebar-button" onClick ="signoutClick()">
-          <img class="sidebar-btn-img" alt="Sign out" src="/Mir/images/signout.svg" loading="lazy"/>
+          <img class="sidebar-btn-img" alt="Sign out" src="../../images/signout.svg" loading="lazy"/>
           Sign out
       </li>
   `;
@@ -41,7 +41,7 @@
   }
 
   function signOut(){
-    window.open("/Mir/html/logins/login-by-pass.html", '_top');
+    window.open("../../html/logins/login-by-pass.html", '_top');
   }
   
   function toggleHidden(elementId){
@@ -62,7 +62,7 @@
     confirmWindow.innerHTML = `
       <div id="confirm-container" class="flex col width-30per radius-5px section-background-color">
         <div class="full-width flex row justify-right error-background-color padding-1025px">  
-          <img class="img-35px pointer" onclick="closeConfirmWindow()" alt="Close" src="/Mir/images/x.svg" loading="lazy"/>
+          <img class="img-35px pointer" onclick="closeConfirmWindow()" alt="Close" src="../../images/x.svg" loading="lazy"/>
         </div>
         <div class="flex col padding-15px gap-15px">
           <div class="full-width flex row align-center justify-center gap-frame">             
