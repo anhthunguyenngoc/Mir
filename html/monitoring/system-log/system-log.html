@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/Mir/css/app-style-guide.css" />
+    <link rel="stylesheet" href="/Mir/css/sidebar.css" />
+    <link rel="stylesheet" href="/Mir/css/subsidebar.css" />
+    <link rel="stylesheet" href="/Mir/css/header.css" />
+    <link rel="stylesheet" href="/Mir/css/setup.css" />
+
+    <script src="/Mir/js/sidebar.js" defer></script>
+    <script src="/Mir/js/subsidebar.js" defer></script>
+    <script src="/Mir/js/monitoring/monitoring.js" defer></script>
+    <script src="/Mir/js/header.js"></script>
+    <script src="/Mir/js/rest-api.js"></script>
+    <script src="/Mir/js/monitoring/system-log/system-log.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
+    />
+    <title></title>
+  </head>
+
+  <body>
+    <ul id="left-sidebar-list"></ul>
+
+    <main>
+      <header-component style="height: 40px"> </header-component>
+
+      <div class="main-content">
+        <ul id="left-subsidebar-list"></ul>
+
+        <div id="content-container">
+          <!--Content-->
+
+          <div id="mission-content" class="content flex">
+            <!--Content title-->
+            <div class="flex col gap-5px">
+              <h1>System log</h1>
+              <div class="row-5px">
+                Read the system log from the robot.
+                <button class="help-btn">
+                  <img
+                    class="help-btn-img"
+                    alt="Help"
+                    src="/Mir/images/help.svg"
+                    loading="lazy"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="full-width flex row gap-frame">
+              <section class="full-width flex col gap-frame">
+                <table id="map-table">
+                  <thead>
+                    <tr>
+                      <th
+                        class="nowrap col-1 text-align-center"
+                        style="width: 5%"
+                      >
+                        State
+                      </th>
+                      <th
+                        class="nowrap col-2 text-align-left"
+                        style="width: 30%"
+                      >
+                        Module
+                      </th>
+                      <th
+                        class="nowrap col-3 text-align-left"
+                        style="width: 60%"
+                      >
+                        Message
+                      </th>
+                      <th class="nowrap col-4" style="width: 5%">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <td class="col-1 text-align-center" style="width: 5%">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clip-path="url(#clip0_1222_5208)">
+                          <path
+                            d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                            class="fill-color-btn"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1222_5208">
+                            <rect
+                              width="24"
+                              height="24"
+                              class="fill-color-btn"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </td>
+                    <td class="col-2 text-align-left" style="width: 30%">
+                      Module
+                    </td>
+                    <td class="col-3 text-align-left" style="width: 60%">
+                      Message
+                    </td>
+                    <td class="col-4" style="width: 5%">00:00:00</td>
+                  </tbody>
+                </table>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

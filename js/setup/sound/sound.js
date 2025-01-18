@@ -1,0 +1,1 @@
+document.getElementById('sound').classList.add('selected');

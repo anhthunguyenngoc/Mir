@@ -1,0 +1,1 @@
+document.getElementById('mission-log').classList.add('selected');

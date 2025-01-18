@@ -1,0 +1,134 @@
+#mission-list-container{
+  width: 65%;
+}
+#mission-queue-container {
+  width: 35%;
+}
+
+.help-btn {
+    border-radius: 25px;
+    width: fit-content;
+    padding: 2px;
+}
+
+.mission {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    border: 2px solid var(--color-button); 
+    border-radius: 3px;
+}
+
+.mission-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 12px 20px;
+    border-right: 2px solid var(--color-button);
+}
+
+.mission-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    padding: 7px;
+}
+
+.mission-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    height: fit-content;
+}
+
+#filter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+#number-of-item {
+    width: fit-content;
+    white-space: nowrap;
+}
+
+table{
+    border: 2px solid var(--color-button);
+    border-radius: 3px;
+    width: 100%;
+}
+  
+  table thead tr{
+    background-color: var(--color-background);
+  }
+  
+  table thead tr th, table tbody tr td{
+    padding: 10px;
+    border: 2px solid var(--color-button);
+    
+  }
+  
+  table tbody {
+    background-color: var(--color-frame-background);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-frame);
+  }
+
+  .col-n {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    border-radius: 2px;
+    text-align: right;
+  }
+
+  .permission-table .col-3 input{
+    width: var(--body-size);
+    height: var(--body-size);
+  }
+
+  .mission-queue-icon svg{
+    stroke: var(--color-button);
+  }
+
+  .content-div {
+    background-color: var(--color-background);
+    padding: 15px;
+    border-radius: 3px;
+  }
+
+.mission-group-btn {
+  position: relative;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.mission-group-btn:hover{
+  background-color: var(--color-button-hover);
+}
+
+.action-list {
+  background-color: #fff;
+  color: var(--color-button);
+}
+
+.action-btn {
+  padding: 10px;
+}
+
+.action-btn:hover {
+  background-color: var(--color-subsidebar-background);
+}

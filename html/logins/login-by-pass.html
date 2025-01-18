@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/Mir/css/app-style-guide.css"/>
+    <link rel="stylesheet" href="/Mir/css/login.css"/>
+    
+    <script src="/Mir/js/login.js"></script>
+    <script src="/Mir/js/rest-api.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
+    />
+    <title></title>
+  </head>
+
+  <body class="flex col align-center justify-center">
+    <div class="width-75per height-75per flex col">
+        <div class="full-width flex row sidebar-background-color align-center login-header">
+            <div class="full-width">
+                Robot's name
+            </div>
+            <div  class="nowrap">
+                Please choose a way to sign in:
+            </div>
+            <ul class="flex row full-height align-end">
+                <li>
+                    <button class="login-btn selected nowrap padding-15px full-height">Username and password</button>
+                </li>
+                <li>
+                    <button class="login-btn nowrap padding-15px full-height" onclick="signInByCode()">PIN code</button>
+                </li>
+            </ul>
+        </div>
+
+        <section class="full-width full-height flex row gap-frame">
+            <div class="width-50per flex col gap-frame">
+                <h2>Sign in by username and password</h2>
+                <div>
+                    Enter your username and password to sign in to the robot.
+                </div>
+                <div>
+                    Your username and password should be given to you by either the robot administrator or found in the robot manual.
+                </div>
+                <div>
+                    If you don't have a username and password, please contact the robot administrator.
+                </div>
+            </div>
+            <div class="width-50per flex col gap-frame">
+                <div class="full-width flex col gap-5px">
+                    <label for="username">Username</label>
+                    <input id="username" placeholder="Enter your username..." name="username" type="text">
+                </div>
+                <div class="full-width flex col gap-5px">
+                    <label for="pass">Password</label>
+                    <input id="pass" placeholder="Enter your password..." name="pass" type="password">
+                </div>
+                <button id="sign-in" onclick="confirmSignInByPass()">Sign in</button>
+            </div>
+        </section>
+    </div>
+  </body>
+</html>

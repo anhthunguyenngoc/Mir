@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/Mir/css/app-style-guide.css"/>
+    <link rel="stylesheet" href="/Mir/css/sidebar.css"/>
+    <link rel="stylesheet" href="/Mir/css/subsidebar.css"/>
+    <link rel="stylesheet" href="/Mir/css/header.css"/>
+    <link rel="stylesheet" href="/Mir/css/dashboard.css"/>
+    <link rel="stylesheet" href="/Mir/css/map.css">
+    
+    <script src="/Mir/js/sidebar.js" defer></script>
+    <script src="/Mir/js/subsidebar.js" defer></script>
+    <script src="/Mir/js/header.js"></script>
+    <script src="/Mir/js/rest-api.js"></script>
+    <script src="/Mir/js/data.js" ></script>
+    <script src="/Mir/js/map.js" defer></script>
+    <script src="/Mir/js/map-canvas.js" defer></script>
+    <script src="/Mir/js/dashboard.js" defer></script>    
+
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js"></script>
+    <title></title>
+  </head>
+
+  <body>
+    <ul id="left-sidebar-list">
+    </ul>
+    
+    <main>
+      <header-component style="height: 40px;">
+      </header-component>
+      <div class="main-content">
+        <!--subsidebar.js-->
+        <ul id="left-subsidebar-list">
+        </ul>
+
+        <!--Content-->
+        <div id="content-container">
+          <div id="content" class="content flex">
+            <div class="content-header">
+              <div class="row-5px">
+                <div>
+                  Dashboard: Name
+                </div>
+                |
+                <div>
+                  Contains: Number widget(s)
+                </div>
+              </div>
+
+              <div class="row-5px">
+                <div class="link">
+                  Open in DashboardDesigner
+                </div>
+                |
+                <div class="link">
+                  Previous
+                </div>
+                |
+                <div class="link">
+                  Next
+                </div>
+              </div>
+            </div>
+
+            <div class="top-content">
+            <section id="robot-info">
+              <ul>
+                <li class="robot-info-title">
+                  <h2 id="robot-name">text</h2>
+                </li>
+                <li class="robot-info-text">
+                  Model
+                  <div id="robot-model">text</div>
+                </li>
+                <li class="robot-info-text">
+                  Serial number
+                  <div id="robot-serial">text</div>
+                </li>
+                <li class="robot-info-text">
+                  Battery percentage
+                  <div id="robot-battery">text</div>
+                </li>
+                <li class="robot-info-text">
+                  Remaining battery time
+                  <div id="robot-remaintime">text</div>
+                </li>
+                <li class="robot-info-text">
+                  Uptime
+                  <div id="robot-uptime">text</div>
+                </li>
+                <li class="robot-info-text">
+                  Moved
+                  <div id="robot-moved">text</div>
+                </li>
+              </ul>
+            </section>
+
+              <section id="manual-control">
+                <div class="manual-control-text">Select Manual control to control the robot manually.</div>
+                <button id="control-btn" onClick ="controlClick()">Manual control</button>
+              </section>
+            </div>
+
+          <section id="map-canvas">
+
+          </section>
+          </div>
+        </div>
+    </main>
+  </body>
+</html>

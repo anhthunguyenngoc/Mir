@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/Mir/css/app-style-guide.css"/>
+    <link rel="stylesheet" href="/Mir/css/sidebar.css"/>
+    <link rel="stylesheet" href="/Mir/css/subsidebar.css"/>
+    <link rel="stylesheet" href="/Mir/css/header.css"/>
+    <link rel="stylesheet" href="/Mir/css/setup.css"/>
+    
+    <script src="/Mir/js/sidebar.js" defer></script>
+    <script src="/Mir/js/subsidebar.js" defer></script>
+    <script src="/Mir/js/setup.js" defer></script>
+    <script src="/Mir/js/header.js"></script>
+    <script src="/Mir/js/rest-api.js"></script>
+    <script src="/Mir/js/setup/mission/create-mission.js" defer></script>
+
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
+    />
+    <title></title>
+  </head>
+
+  <body>
+    <ul id="left-sidebar-list">
+    </ul>
+
+    <main>
+      <header-component style="height: 40px;">
+      </header-component>
+
+      <div class="main-content">
+        <ul id="left-subsidebar-list">
+        </ul>
+
+        <div id="content-container">
+        <!--Content-->
+    
+        <!--CREATE MISSION -->
+        <div id="create-mission-content" class="content flex">
+          <section>
+            <div class="flex row full-width align-center space-between">
+              <div class="flex col gap-5px">
+                <h1>Create mission</h1>
+                <div class="row-5px">
+                  Create a new mision.
+                  <button class="help-btn">
+                    <img class="help-btn-img" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
+                  </button>
+                </div>
+              </div>
+            
+              <button onclick="goBack()">
+                <img class="plus-btn-img" alt="Go back" src="/Mir/images/go-back.svg" loading="lazy"/>
+                Go back
+              </button>
+            </div>
+
+            <div class="col-3px">
+              <label for="name">Name</label>
+              <input id="create-mission-name" name="create-mission-name" placeholder="Enter the mission's name..." type="text">
+            </div>
+
+            <div class="col-3px">
+              <label for="description">Description</label>
+              <input id="create-mission-description" name="create-mission-description" placeholder="Enter the mission's description..." type="text">
+            </div>
+
+            <div class="full-width flex row gap-frame">
+              <div class="col-3px width-50per">
+                <label for="name">Mission group</label>
+                <div class="flex row gap-5px">
+                  <select class="full-width" id="mission-groups-list" name="mission-groups-list" >
+                    <!--
+                      tải danh sách các mission groups
+                      getMissionGroups() trong rest-api.js
+                    -->
+                  </select>
+
+                  <button class="nowrap">
+                    Create / Edit
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-3px width-50per">
+                <label for="name">Site</label>
+                <select class="full-width" id="mission-groups-list" name="mission-groups-list" >
+                  <option value="Back and forth">Back and forth</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
+              </div>
+            </div>
+            <div class="row-5px">
+              <button class="flex row gap-5px" onclick="postMission()">
+                <img class="plus-btn-img" alt="Save user groups" src="/Mir/images/tick.svg" loading="lazy"/>
+                Create mission
+              </button>
+              <button class="flex row gap-5px outline-btn" onclick="goBack()">
+                <svg class="plus-btn-img fill-color-btn stroke-color-btn" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"/>           
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>           
+                  <g id="SVGRepo_iconCarrier">                 
+                    <path class="fill-color-btn" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"/>                
+                  </g>
+                </svg>
+                Cancel
+              </button>
+            </div>
+
+          </section>
+        </div>
+
+      </div>
+      </div>
+    </main>
+  </body>
+</html>

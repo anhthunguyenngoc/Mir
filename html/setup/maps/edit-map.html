@@ -1,0 +1,325 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="/Mir/css/app-style-guide.css"/>
+    <link rel="stylesheet" href="/Mir/css/sidebar.css"/>
+    <link rel="stylesheet" href="/Mir/css/subsidebar.css"/>
+    <link rel="stylesheet" href="/Mir/css/header.css"/>
+    <link rel="stylesheet" href="/Mir/css/setup.css"/>
+    <link rel="stylesheet" href="/Mir/css/map.css">
+    
+    <script src="/Mir/js/sidebar.js" defer></script>
+    <script src="/Mir/js/subsidebar.js" defer></script>
+    <script src="/Mir/js/setup.js" defer></script>
+    <script src="/Mir/js/header.js"></script>
+    <script src="/Mir/js/rest-api.js"></script>
+    <script src="/Mir/js/map.js" defer></script>
+    
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto Flex:wght@400;600&display=swap"
+    />
+    <title></title>
+  </head>
+
+  <body>
+    <ul id="left-sidebar-list">
+    </ul>
+
+    <main>
+      <header-component style="height: 40px;">
+      </header-component>
+
+      <div class="main-content">
+        <ul id="left-subsidebar-list">
+        </ul>
+
+        <div id="content-container">
+          
+        <!--EDIT MAP-->
+        <div id="edit-map-content" class="content">
+          <section>
+            <div class="flex row full-width align-center space-between">
+              <div class="flex col gap-5px">
+                <h1>Map's title</h1>
+                <div class="row-5px">
+                  Edit and draw map.
+                  <button class="help-btn">
+                    <img class="help-btn-img" alt="Help" src="/Mir/images/help.svg" loading="lazy"/>
+                  </button>
+                </div>
+              </div>
+            
+              <button id="go-back"  onclick="goBack()">
+                <img class="plus-btn-img" alt="Go back" src="/Mir/images/go-back.svg" loading="lazy"/>
+                Go back
+              </button>
+            </div>
+
+            <div class="map">
+              <!--Create maker-->
+              <form id="maker-form" class="form">
+                <div>
+                  <h2>Create maker</h2>
+                </div>
+                <div>
+                  <label for="name">Name</label><br>
+                  <input id="name" name="name" type="text">
+                </div>
+                <div class="form-input-row">
+                  <div class="form-input-row-column">
+                    <label for="type">Type</label><br>
+                    <input id="type" name="type" type="text">
+                  </div>
+                  <div class="form-input-row-column">
+                    <label for="orient">Orientation from X-asis</label><br>
+                    <input id="orient" name="orient" type="text">
+                  </div>
+                </div>
+                <div class="form-input-row">
+                  <div class="form-input-row-column">
+                    <label for="x-meter">X coordinate in meters</label><br>
+                    <input id="x-meter" name="x-meter" type="text">
+                  </div>
+                  <div class="form-input-row-column">
+                    <label for="y-meter">Y coordinate in meters:</label><br>
+                    <input id="y-meter" name="y-meter" type="text">
+                  </div>
+                </div>
+                <div class="form-input-row">
+                  <div class="form-input-row-column">
+                    <label for="x-offset">X offset:</label><br>
+                    <input id="x-offset" name="x-offset" type="text">
+                  </div>
+                  <div class="form-input-row-column">
+                    <label for="y-offset">Y offset</label><br>
+                    <input id="y-offset" name="y-offset" type="text">
+                  </div>
+                </div>
+                <div>
+                  <label for="orient-offset">Orientation offset</label><br>
+                  <input id="orient-offset" name="orient-offset" type="text">
+                </div>
+                <div>
+                  <label for="bar-length">Bar length</label><br>
+                  <input id="bar-length" name="bar-length" type="text">
+                </div>
+                <div>
+                  <label for="bar-distance">Bar distance</label><br>
+                  <input id="bar-distance" name="bar-distance" type="text">
+                </div>
+                <div class="form-btn-row">
+                  <button class="form-btn">
+                    OK
+                  </button>
+                  <button class="form-btn">
+                    Detect maker
+                  </button>
+                  <button class="form-btn">
+                    Cancel
+                  </button>
+                </div>
+              </form>
+              
+
+              <!--Create position-->
+              <form id="pos-form" class="form">
+                <div>
+                  <h2>Create position</h2>
+                </div>
+                <div>
+                  <label for="name">Name</label><br>
+                  <input id="name" name="name" type="text">
+                </div>
+                <div class="form-input-row">
+                  <div class="form-input-row-column">
+                    <label for="type">Type</label><br>
+                    <input id="type" name="type" type="text">
+                  </div>
+                  <div class="form-input-row-column">
+                    <label for="orient">Orientation from X-asis</label><br>
+                    <input id="orient" name="orient" type="text">
+                  </div>
+                </div>
+                <div class="form-input-row">
+                  <div class="form-input-row-column">
+                    <label for="x-meter">X coordinate in meters</label><br>
+                    <input id="x-meter" name="x-meter" type="text">
+                  </div>
+                  <div class="form-input-row-column">
+                    <label for="y-meter">Y coordinate in meters:</label><br>
+                    <input id="y-meter" name="y-meter" type="text">
+                  </div>
+                </div>
+                
+                <div class="form-btn-row">
+                  <button class="form-btn">
+                    OK
+                  </button>
+                  <button class="form-btn">
+                    Use robot position
+                  </button>
+                  <button class="form-btn">
+                    Cancel
+                  </button>
+                </div>
+              </form>
+              
+              <div class="tools">
+
+                <ul class="map-options">
+                  <li>
+                    <button class="map-option" id="search">
+                      <img class="map-option-tool-img" src="/Mir/images/search.svg" alt="Search">
+                    </button>         
+                  </li>
+                  <li>
+                    <button class="map-option" id="more">
+                      <img class="map-option-tool-img" src="/Mir/images/more.svg" alt="More action">
+                    </button>         
+                  </li>
+                  <li>
+                    <button class="map-option" id="undo">
+                      <img class="map-option-tool-img" src="/Mir/images/undo.svg" alt="Undo">
+                    </button>              
+                  </li>
+                  <li>
+                    <button class="map-option" id="save">
+                      <img class="map-option-tool-img" src="/Mir/images/save.svg" alt="Save">
+                    </button>              
+                  </li>
+                  <li>
+                    <button class="map-option" id="drag">
+                      <img class="map-option-tool-img" src="/Mir/images/drag.svg" alt="">
+                    </button>              
+                  </li>
+                  <li>
+                    <button class="map-option" id="cursor">
+                      <img class="map-option-tool-img" src="/Mir/images/cursor.svg" alt="">
+                    </button>              
+                  </li>
+                </ul>
+  
+                <ul class="map-options">
+                  <li>
+                    <select id="map-options-select" style="height: 100%;" name="map-options-select" >
+                      <option value="Show all">Show all</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </li>
+                  <li>
+                    <button class="map-option tool" id="zoom-in">
+                      <img class="map-option-tool-img" src="/Mir/images/zoom-in.svg" alt="Zoom in">
+                    </button>              
+                  </li>
+                  <li>
+                    <button class="map-option tool" id="zoom-out">
+                      <img class="map-option-tool-img" src="/Mir/images/zoom-out.svg" alt="Zoom out">
+                    </button>              
+                  </li>
+                </ul>
+                
+              <!--Editing options
+              <ul class="map-options">
+                <li>
+                  <button class="map-option active tool" id="brush">
+                    <img class="map-option-tool-img" src="/Mir/images/brush.svg" alt="Brush">
+                  </button>         
+                </li>
+                <li>
+                  <button class="map-option tool" id="eraser">
+                    <img class="map-option-tool-img" src="/Mir/images/erase.svg" alt="Eraser">
+                  </button>              
+                </li>
+                <li>
+                  <button class="map-option tool" id="addpos">
+                    <img class="map-option-tool-img" src="/Mir/images/addpos.svg" alt="Add position">
+                  </button>              
+                </li>
+                <li>
+                  <button class="map-option tool" id="addmaker">
+                    <img class="map-option-tool-img" src="/Mir/images/addmaker.svg" alt="Add maker">
+                  </button>              
+                </li>
+              </ul>
+
+              <ul class="map-options">
+                <li>
+                  <button class="map-option tool" id="zoom-in">
+                    <img class="map-option-tool-img" src="/Mir/images/zoom-in.svg" alt="Zoom in">
+                  </button>              
+                </li>
+                <li>
+                  <button class="map-option tool" id="zoom-out">
+                    <img class="map-option-tool-img" src="/Mir/images/zoom-out.svg" alt="Zoom out">
+                  </button>              
+                </li>
+                <li>
+                  <button class="map-option tool" id="save">
+                    <img class="map-option-tool-img" src="/Mir/images/save.svg" alt="Save">
+                  </button>              
+                </li>
+              </ul>
+              -->
+              
+              <!--Mapping options
+              <ul class="maping-options">
+                <li>
+                  <button class="map-option tool" id="stop">
+                    <img class="map-option-tool-img" src="/Mir/images/stop.svg" alt="Stop">
+                  </button>         
+                </li>
+                <li>
+                  <button class="map-option tool" id="addpos">
+                    <img class="map-option-tool-img" src="/Mir/images/addpos.svg" alt="Add position">
+                  </button>              
+                </li>
+              </ul>
+              -->
+
+              <!--Edit options
+              <ul class="maping-options">
+                <li>
+                  <button class="map-option tool" id="save">
+                    <img class="map-option-tool-img" src="/Mir/images/save.svg" alt="Save">
+                  </button>         
+                </li>
+                <li>
+                  <button class="map-option tool" id="edit">
+                    <img class="map-option-tool-img" src="/Mir/images/edit.svg" alt="Edit map">
+                  </button>              
+                </li>
+              </ul>
+
+              <ul class="map-options">
+                <li>
+                  <button class="map-option tool" id="zoom-in">
+                    <img class="map-option-tool-img" src="/Mir/images/zoom-in.svg" alt="Zoom in">
+                  </button>              
+                </li>
+                <li>
+                  <button class="map-option tool" id="zoom-out">
+                    <img class="map-option-tool-img" src="/Mir/images/zoom-out.svg" alt="Zoom out">
+                  </button>              
+                </li>
+              </ul>
+              -->
+              
+              </div>
+              <div class="drawing-board">
+                <canvas></canvas>
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+      </div>
+      </div>
+    </main>
+  </body>
+</html>

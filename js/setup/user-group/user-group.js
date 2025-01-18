@@ -1,0 +1,1 @@
+document.getElementById('user-group').classList.add('selected');

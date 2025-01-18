@@ -1,0 +1,1 @@
+document.getElementById('analytic').classList.add('selected');

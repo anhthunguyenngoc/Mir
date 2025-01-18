@@ -1,0 +1,42 @@
+.selected {
+    background-color: var(--color-frame-background);   
+    color: #000;
+}
+
+.selected:hover {
+    cursor: default;
+    background-color: var(--color-frame-background);
+}
+
+.login-btn {
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 5px;
+    border-bottom: 0; 
+}
+
+.login-btn:hover {
+    border-width: 5px;
+    border-color: var(--color-button);
+    border-bottom: 0;
+}
+
+.login-header {
+    height: fit-content;
+    padding-left: var(--padding-frame);
+    padding-right: var(--padding-frame);
+    gap: var(--padding-frame);
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#sign-in {
+    width: 25%;
+    padding: 10px;
+}
+
+input {
+    padding: 15px;
+}
